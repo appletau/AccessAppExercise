@@ -35,6 +35,11 @@ class UserListViewController: UIViewController {
             self?.tableView.isHidden = isLoading
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? DetailViewController,let selectedIndex = tableView.indexPathForSelectedRow?.row else {return}
+        vc.controller.selectedCellVM = viewModel.userCellVMList.value[selectedIndex]
+    }
 }
 
 extension UserListViewController:UITableViewDataSource {
@@ -51,6 +56,7 @@ extension UserListViewController:UITableViewDataSource {
 
 extension UserListViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "GoToDetailView", sender: self)
         print(viewModel.userCellVMList.value[indexPath.row].login_ID)
     }
 }

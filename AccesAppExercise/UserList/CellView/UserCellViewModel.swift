@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
-struct UserCellViewModel {
+class UserCellViewModel {
     var identifier:UUID
     var login_ID:String
     var avatar_url:URL
+    var isDownloadimage = Observable<Bool>(value: false)
+    var avatarImage = UIImage(named: "avatarPlaceholder")
     var isAdmin:Bool
     
     init(user:User) {
@@ -19,6 +22,11 @@ struct UserCellViewModel {
         self.avatar_url = user.avatar_url
         self.isAdmin = user.site_admin
         self.identifier = UUID()
+        RestManager.share.getData(fromURL: self.avatar_url) { (data) in
+            guard let data = data, let image = UIImage(data: data) else {return}
+            self.avatarImage = image
+            self.isDownloadimage.value = true
+        }
     }
 }
 

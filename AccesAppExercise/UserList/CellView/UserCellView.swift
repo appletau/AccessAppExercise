@@ -19,10 +19,15 @@ class UserCellView: UITableViewCell {
         self.viewModel = viewModel
         loginIdLabel.text = viewModel.login_ID
         isAdminLabel.isHidden = !viewModel.isAdmin
-        RestManager.share.getData(fromURL: viewModel.avatar_url) { (data) in
-            guard let data = data, let image = UIImage(data: data) else {return}
-            self.avatarImageView.image = image
+        self.viewModel?.isDownloadimage.addObserver { [weak self] (isDownloading) in
+            self?.isUserInteractionEnabled = isDownloading
+            self?.avatarImageView.image = viewModel.avatarImage
         }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        viewModel?.isDownloadimage.removeObserver(atIndex: 0)
     }
     
     override func awakeFromNib() {

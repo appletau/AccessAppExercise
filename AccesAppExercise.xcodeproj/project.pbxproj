@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2A8302123FE0EE3007F9335 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A8302023FE0EE3007F9335 /* DetailViewController.swift */; };
+		E2A8302323FE0F01007F9335 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A8302223FE0F01007F9335 /* DetailController.swift */; };
+		E2A8302523FE0F14007F9335 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A8302423FE0F14007F9335 /* DetailViewModel.swift */; };
+		E2A8302723FE83AF007F9335 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A8302623FE83AF007F9335 /* LoadingIndicatorView.swift */; };
 		E2B0F0A923FCC7C3002188D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0F0A823FCC7C3002188D0 /* AppDelegate.swift */; };
 		E2B0F0AB23FCC7C3002188D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0F0AA23FCC7C3002188D0 /* SceneDelegate.swift */; };
 		E2B0F0B023FCC7C3002188D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2B0F0AE23FCC7C3002188D0 /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E2A8302023FE0EE3007F9335 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E2A8302223FE0F01007F9335 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		E2A8302423FE0F14007F9335 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		E2A8302623FE83AF007F9335 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		E2B0F0A523FCC7C3002188D0 /* AccesAppExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccesAppExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2B0F0A823FCC7C3002188D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2B0F0AA23FCC7C3002188D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +61,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E2A8301E23FE0E9A007F9335 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				E2A8302023FE0EE3007F9335 /* DetailViewController.swift */,
+				E2A8302223FE0F01007F9335 /* DetailController.swift */,
+				E2A8302423FE0F14007F9335 /* DetailViewModel.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
 		E2B0F09C23FCC7C3002188D0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +90,7 @@
 		E2B0F0A723FCC7C3002188D0 /* AccesAppExercise */ = {
 			isa = PBXGroup;
 			children = (
+				E2A8301E23FE0E9A007F9335 /* DetailView */,
 				E2B0F0CC23FCCC20002188D0 /* Model */,
 				E2B0F0C823FCCA57002188D0 /* Helper */,
 				E2B0F0BC23FCC82C002188D0 /* RestManager */,
@@ -109,6 +128,7 @@
 		E2B0F0C823FCCA57002188D0 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E2A8302623FE83AF007F9335 /* LoadingIndicatorView.swift */,
 				E2B0F0CA23FCCA88002188D0 /* Observable.swift */,
 			);
 			path = Helper;
@@ -205,10 +225,14 @@
 				E2B0F0CB23FCCA88002188D0 /* Observable.swift in Sources */,
 				E2B0F0C723FCC9FC002188D0 /* UserListViewController.swift in Sources */,
 				E2B0F0C523FCC9E5002188D0 /* UserListController.swift in Sources */,
+				E2A8302123FE0EE3007F9335 /* DetailViewController.swift in Sources */,
 				E2B0F0C023FCC850002188D0 /* RestManager.swift in Sources */,
 				E2B0F0D523FCE493002188D0 /* UserCellView.swift in Sources */,
+				E2A8302723FE83AF007F9335 /* LoadingIndicatorView.swift in Sources */,
 				E2B0F0BE23FCC841002188D0 /* HttpRequest.swift in Sources */,
 				E2B0F0CE23FCCC3E002188D0 /* UserCellViewModel.swift in Sources */,
+				E2A8302323FE0F01007F9335 /* DetailController.swift in Sources */,
+				E2A8302523FE0F14007F9335 /* DetailViewModel.swift in Sources */,
 				E2B0F0A923FCC7C3002188D0 /* AppDelegate.swift in Sources */,
 				E2B0F0AB23FCC7C3002188D0 /* SceneDelegate.swift in Sources */,
 				E2B0F0D023FCCC89002188D0 /* User.swift in Sources */,
