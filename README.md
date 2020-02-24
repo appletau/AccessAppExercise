@@ -1,4 +1,4 @@
-# AccesAppExercise
+# AccessAppExercise
 1.Create a HttpRequest struct to handle the request package
 <br />2.Create a RestManager class by URLSession to handle the RestFul Action & Response
 <br />3.Create a User struct as Json model
